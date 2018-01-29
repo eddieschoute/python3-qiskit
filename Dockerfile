@@ -1,4 +1,4 @@
-FROM eschoute/python3-matplotlib:latest
+FROM eschoute/python3-matplotlib:0.0.2
 
 RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 # RUN apk add openblas-dev
