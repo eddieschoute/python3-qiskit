@@ -3,7 +3,7 @@ FROM eschoute/python3-matplotlib:0.0.2
 RUN echo "http://dl-8.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 # RUN apk add openblas-dev
 RUN apk --no-cache --update-cache add --virtual scipy-build \
-		build-base freetype-dev lapack-dev pkgconfig gfortran libffi-dev openssl-dev
+		build-base freetype-dev lapack-dev pkgconfig gfortran libffi-dev openssl-dev cmake
 RUN pip install --no-cache-dir 'scipy>=0.19,<1.1'
 RUN pip install --no-cache-dir 'qiskit==0.4.9'
 RUN apk del scipy-build
